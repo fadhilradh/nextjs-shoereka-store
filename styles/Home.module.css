@@ -40,6 +40,7 @@
 
 .title a:hover,
 .title a:focus,
+.card a:hover,
 .title a:active {
   text-decoration: underline;
 }
@@ -74,7 +75,7 @@
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  max-width: 800px;
+  max-width: 1200px;
   margin-top: 3rem;
 }
 
@@ -87,13 +88,13 @@
   border: 1px solid #eaeaea;
   border-radius: 10px;
   transition: color 0.15s ease, border-color 0.15s ease;
-  width: 45%;
+  width: 25%;
+  max-height: 25rem;
 }
 
 .card:hover,
 .card:focus,
 .card:active {
-  color: #0070f3;
   border-color: #0070f3;
 }
 
