@@ -4,6 +4,7 @@ import {getAllProductIds, getProductData} from '../../lib/products'
 export default function ProductPage({productData}) {
   return (
     <div className={styles.container}>
+       <a href="/">Shoereka Store</a>
        <div className={styles.img}>
            <img  
               src={productData.image} 
@@ -22,20 +23,23 @@ export default function ProductPage({productData}) {
   )
 }
 
+
+
 export async function getStaticPaths() {
-    const paths = await getAllProductIds();
-    return     {
-      paths, 
-      fallback: false
-    }
+  const paths = await getAllProductIds();
+  return     {
+    paths, 
+    fallback: false
+  }
 }
 
+
 export async function getStaticProps({params}) {
-    const productData = await getProductData(params.id)
-    console.log(productData);
-    return {
-      props: {
-        productData
-      }
+  const productData = await getProductData(params.id)
+  console.log(productData);
+  return {
+    props: {
+      productData
     }
+  }
 }
